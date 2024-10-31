@@ -15,14 +15,13 @@ export const MainPage = () => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center; /* 수평 가운데 정렬 추가 */
   flex-direction: column;
   width: 100vw;
 `;
 
 const TextBox = styled.div`
   margin-top: 77px;
+  margin-left: 10%;
   font-size: 32px;
   font-weight: 700;
-  text-align: center; /* 텍스트 가운데 정렬 */
 `;

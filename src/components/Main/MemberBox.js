@@ -20,6 +20,7 @@ export const MemberBox = () => {
 const Container = styled.div`
   display: grid;
   margin-top: 49px;
+  margin-left: 10%;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 29px 39px;
   width: 1056px;
