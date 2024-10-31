@@ -18,7 +18,6 @@ const Container = styled.div`
   width: 80%;
   background-color: #f5f5f5;
   border-radius: 21px;
-  margin-left: 10%;
   margin-top: 21px;
 `;
 
