@@ -4,7 +4,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { MainPage } from "./pages/MainPage";
 import { QuestionPage } from "./pages/QuestionPage";
 import { SendPage } from "./pages/SendPage";
-
+import { ReplyPage } from "./pages/ReplyPage";
 function App() {
   return (
     <>
@@ -14,6 +14,7 @@ function App() {
         <Route path="/main" element={<MainPage />} />
         <Route path="/question" element={<QuestionPage />} />
         <Route path="/send" element={<SendPage />} />
+        <Route path="/reply" element={<ReplyPage />} />
       </Routes>
     </>
   );
