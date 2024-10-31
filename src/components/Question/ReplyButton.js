@@ -5,14 +5,14 @@ export const ReplyButton = () => {
 };
 
 const Container = styled.div`
-  margin-left: 40%;
+  margin-left: 40vw;
   margin-top: 32px;
   margin-bottom: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 20%;
+  width: 20vw;
   height: 53px;
   font-size: 24px;
   background-color: #d9d9d9;
