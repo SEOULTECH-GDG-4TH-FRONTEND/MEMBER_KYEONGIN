@@ -6,6 +6,7 @@ import { QuestionPage } from "./pages/QuestionPage";
 import { SendPage } from "./pages/SendPage";
 import { ReplyPage } from "./pages/ReplyPage";
 import { ProfilePage } from "./pages/ProfilePage";
+import { HistoryPage } from "./pages/HistoryPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/send" element={<SendPage />} />
         <Route path="/reply" element={<ReplyPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/history" element={<HistoryPage />} />
       </Routes>
     </>
   );
