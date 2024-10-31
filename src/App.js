@@ -5,6 +5,8 @@ import { MainPage } from "./pages/MainPage";
 import { QuestionPage } from "./pages/QuestionPage";
 import { SendPage } from "./pages/SendPage";
 import { ReplyPage } from "./pages/ReplyPage";
+import { ProfilePage } from "./pages/ProfilePage";
+
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
         <Route path="/question" element={<QuestionPage />} />
         <Route path="/send" element={<SendPage />} />
         <Route path="/reply" element={<ReplyPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </>
   );
