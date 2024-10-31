@@ -23,7 +23,7 @@ const Container = styled.div`
 `;
 const TextBox = styled.div`
   margin-top: 70px;
-  margin-left: 10%;
+  margin-left: 10vw;
   font-size: 32px;
   font-weight: 700;
 `;
