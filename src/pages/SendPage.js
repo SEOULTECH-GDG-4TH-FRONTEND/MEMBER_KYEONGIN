@@ -8,7 +8,7 @@ export const SendPage = () => {
   return (
     <Container>
       <TopBar />
-      <TextBox>답변이 도착했어요!</TextBox>
+      <TextBox>답변을 보낼거에요!</TextBox>
       <ProfileBar />
       <ContentInput />
       <SendButton />
