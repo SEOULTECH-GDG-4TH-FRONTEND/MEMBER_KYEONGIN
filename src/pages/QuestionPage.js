@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TopBar } from "../components/common/TopBar";
 import { ProfileBar } from "../components/common/ProfileBar";
 import { ContentInput } from "../components/common/ContentInput";
-import { ReplyButton } from "../components/Question/Button";
+import { ReplyButton } from "../components/Question/ReplyButton";
 
 export const QuestionPage = () => {
   return (
