@@ -19,6 +19,7 @@ const Container = styled.div`
   background-color: #f5f5f5;
   border-radius: 21px;
   margin-top: 21px;
+  margin-left: 10vw;
 `;
 
 const TextContainer = styled.div`

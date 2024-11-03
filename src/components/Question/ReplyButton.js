@@ -1,7 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 export const ReplyButton = () => {
-  return <Container>답장하기</Container>;
+  const navigate = useNavigate();
+  return (
+    <Container
+      onClick={() => {
+        navigate("/main");
+      }}
+    >
+      답장하기
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -17,4 +27,5 @@ const Container = styled.div`
   font-size: 24px;
   background-color: #d9d9d9;
   border-radius: 21px;
+  cursor: pointer;
 `;

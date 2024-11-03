@@ -1,8 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-export const QuestionBox = () => {
+
+export const QuestionBox = (props) => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
-      <Button>답장하기</Button>
+      <Button
+        onClick={() => {
+          navigate("/send");
+        }}
+      >
+        답장하기
+      </Button>
     </Wrapper>
   );
 };
@@ -28,4 +37,5 @@ const Button = styled.div`
   background-color: #d9d9d9;
   margin-right: 20px;
   font-size: 24px;
+  cursor: pointer;
 `;
