@@ -19,9 +19,10 @@ export const MemberBox = () => {
 
 const Container = styled.div`
   display: grid;
-  margin-top: 49px;
-  margin-left: 10vw;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 29px 39px;
-  width: 1056px;
+  gap: 2vw 3vw;
+  padding: 5vh 10vw;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 `;

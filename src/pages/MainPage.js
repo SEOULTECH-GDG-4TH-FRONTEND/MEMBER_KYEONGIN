@@ -17,6 +17,7 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100vw;
+  margin-bottom: 50px;
 `;
 
 const TextBox = styled.div`
