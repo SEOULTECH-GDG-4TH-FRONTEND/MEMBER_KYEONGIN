@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const ContentInput = () => {
+export const ContentInput = ({ value, onChange }) => {
   return (
     <>
-      <InputArea />
+      <InputArea value={value} onChange={onChange} />
     </>
   );
 };

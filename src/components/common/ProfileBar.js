@@ -1,12 +1,30 @@
 import styled from "styled-components";
-import { ReactComponent as ProfileBox } from "../../assets/images/SkyProfileImage.svg";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Data } from "../../assets/Data";
+import { fetchcProfileImage } from "../../utils/fetchProfileImage";
+
 export const ProfileBar = () => {
+  const [target, setTarget] = useState({});
+  const [profileImage, setProfileImage] = useState();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const image = fetchcProfileImage(target.color);
+    setProfileImage(image);
+  }, [target]);
+  useEffect(() => {
+    console.log(id);
+    const targetUser = Data.find((user) => user.id == id);
+    setTarget(targetUser || {});
+  }, [id]);
+
   return (
     <Container>
-      <ProfileBox />
+      {profileImage}
       <TextContainer>
-        <TextName>정윤석</TextName>
-        <TextIntro>안녕하세요 질문해주세요</TextIntro>
+        <TextName>{target.name}</TextName>
+        <TextIntro>{target.bio}</TextIntro>
       </TextContainer>
     </Container>
   );

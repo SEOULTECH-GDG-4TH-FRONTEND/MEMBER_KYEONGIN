@@ -1,14 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-export const ReplyButton = () => {
+export const ReplyButton = ({ disabled }) => {
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!disabled) {
+      navigate("/main");
+    }
+  };
+
   return (
-    <Container
-      onClick={() => {
-        navigate("/main");
-      }}
-    >
+    <Container onClick={handleClick} disabled={disabled}>
       답장하기
     </Container>
   );
@@ -26,6 +29,8 @@ const Container = styled.div`
   height: 53px;
   font-size: 24px;
   background-color: #d9d9d9;
+  color: ${({ disabled }) => (disabled ? "#888" : "#000")};
   border-radius: 21px;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
 `;

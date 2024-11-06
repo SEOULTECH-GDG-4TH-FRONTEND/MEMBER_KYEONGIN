@@ -1,46 +1,29 @@
 import styled from "styled-components";
-import { ReactComponent as SkyProfileImage } from "../../assets/images/SkyProfileImage.svg";
-import { ReactComponent as PurpleProfileImage } from "../../assets/images/PurpleProfileImage.svg";
-import { ReactComponent as GreenProfileImage } from "../../assets/images/GreenProfileImage.svg";
-import { ReactComponent as BlueProfileImage } from "../../assets/images/BlueProfileImage.svg";
 import { TextBox } from "../common/TextBox";
 import { useNavigate } from "react-router-dom";
-
-export const MemberCard = ({ name, profileColor }) => {
+import { fetchcProfileImage } from "../../utils/fetchProfileImage";
+import { useEffect, useState } from "react";
+export const MemberCard = ({ id, name, profileColor, bio, questionCount }) => {
+  const [profileImage, setProfileImage] = useState();
   const navigate = useNavigate();
-  const renderProfileImage = () => {
-    switch (profileColor) {
-      case "sky":
-        return <SkyProfileImage />;
-      case "purple":
-        return <PurpleProfileImage />;
-      case "green":
-        return <GreenProfileImage />;
-      case "blue":
-        return <BlueProfileImage />;
-      default:
-        return <SkyProfileImage />;
-    }
-  };
-
+  useEffect(() => {
+    const profile = fetchcProfileImage(profileColor);
+    setProfileImage(profile);
+  }, []);
   return (
     <CardContainer
       onClick={() => {
-        navigate("/question");
+        navigate(`/question/${id}`);
       }}
     >
-      {renderProfileImage()}
+      {profileImage}
       <TextContainer>
         <TextBox fontsize="1.6vw" text={name} />
-        <TextBox
-          fontsize="1.2vw"
-          text="안녕하세요. 질문해주세요"
-          color="#949494"
-        />
+        <TextBox fontsize="1.2vw" text={bio} color="#949494" />
       </TextContainer>
       <QuestionNumBox>
         <div>💬 받은 질문</div>
-        <div>999개</div>
+        <div>{questionCount}개</div>
       </QuestionNumBox>
     </CardContainer>
   );

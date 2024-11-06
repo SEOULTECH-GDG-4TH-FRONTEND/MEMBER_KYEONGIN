@@ -1,9 +1,21 @@
 import styled from "styled-components";
-
-export const Input = ({ text }) => {
+import { useState } from "react";
+export const Input = ({ text, type, value, onChange }) => {
+  const [isInputClicked, setIsInputClicked] = useState(false);
   return (
     <Container>
-      <InputBox placeholder={text} />
+      <InputBox
+        onFocus={() => {
+          setIsInputClicked(true);
+        }}
+        onBlur={() => {
+          setIsInputClicked(false);
+        }}
+        type={type}
+        value={value}
+        placeholder={isInputClicked === true ? "" : text}
+        onChange={onChange}
+      />
     </Container>
   );
 };
