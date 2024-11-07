@@ -20,6 +20,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 60px;
 `;
 
 const TextBox = styled.div`
