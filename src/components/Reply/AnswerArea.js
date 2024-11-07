@@ -30,7 +30,7 @@ const Container = styled.div`
 `;
 
 const TextArea = styled.div`
-  flex: 1; /* Ensures the TextArea takes up remaining space */
+  flex: 1;
 `;
 
 const RateArea = styled.div`
@@ -39,7 +39,8 @@ const RateArea = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: auto; /* Pushes RateArea to the bottom */
+  margin-top: auto;
+  cursor: pointer;
 `;
 
 const Comment = styled.div`

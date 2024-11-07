@@ -19,7 +19,6 @@ export const ReplyPage = () => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center; /* 전체 요소를 가운데 정렬 */
   flex-direction: column;
 `;
 
@@ -28,5 +27,5 @@ const TextBox = styled.div`
   margin-left: 10vw;
   font-size: 32px;
   font-weight: 700;
-  align-self: flex-start; /* TextBox만 왼쪽 정렬 */
+  align-self: flex-start;
 `;

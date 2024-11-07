@@ -58,7 +58,7 @@ export const Data = [
     id: 9,
     name: `신민규`,
     color: "sky",
-    bio: "안녕. 질문하라.",
+    bio: "안녕. 질문 ㄱ.",
     questionCount: 123,
   },
 ];

@@ -18,8 +18,8 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/main" element={<MainPage />} />
         <Route path="/question/:id" element={<QuestionPage />} />
-        <Route path="/send" element={<SendPage />} />
-        <Route path="/reply" element={<ReplyPage />} />
+        <Route path="/send/:id" element={<SendPage />} />
+        <Route path="/reply/:id" element={<ReplyPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/history" element={<HistoryPage />} />
       </Routes>

@@ -1,14 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-export const SendButton = () => {
+export const SendButton = ({ disabled }) => {
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!disabled) {
+      navigate("/profile");
+    }
+  };
+
   return (
-    <Container
-      onClick={() => {
-        navigate("/profile");
-      }}
-    >
+    <Container onClick={handleClick} disabled={disabled}>
       답장하기
     </Container>
   );
@@ -25,7 +28,9 @@ const Container = styled.div`
   width: 20vw;
   height: 53px;
   font-size: 24px;
-  background-color: #d9d9d9;
+  background-color: ${(props) => (props.disabled ? "#f0f0f0" : "#d9d9d9")};
+  color: ${(props) => (props.disabled ? "#a0a0a0" : "#000")};
   border-radius: 21px;
-  cursor: pointer;
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
 `;

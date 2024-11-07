@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 export const QuestionBox = (props) => {
+  const [id, setId] = useState(1);
   const navigate = useNavigate();
   return (
     <Wrapper>
       <Button
         onClick={() => {
-          navigate("/send");
+          navigate(`/send/${id}`);
         }}
       >
         답장하기

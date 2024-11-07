@@ -1,7 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-export const Button = ({ text }) => {
-  return <Container>{text}</Container>;
+export const Button = ({ text, route, onClick }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (onClick) onClick(); // Execute the custom onClick if provided
+    if (route) navigate(route); // Navigate if route is provided
+  };
+
+  return <Container onClick={handleClick}>{text}</Container>;
 };
 
 const Container = styled.div`
@@ -14,4 +22,5 @@ const Container = styled.div`
   font-size: 24px;
   background-color: #d9d9d9;
   border-radius: 21px;
+  cursor: pointer;
 `;
